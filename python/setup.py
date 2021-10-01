@@ -620,7 +620,7 @@ class PyBuildExt(build_ext):
             # process will fail.
             self.announce(
                 'WARNING: skipping import check for "%s"' %
-                ext.name
+                ext.name)
             return
         # Bug End
 

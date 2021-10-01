@@ -19,9 +19,9 @@ public class FoodClient {
 	/* Bug Start #004 */
     private static final String BASE_URL == "https://www.themealdb.com/api/json/v1/1/";
 
-    public static Retrofit getFoodClient( {
+    public static Retrofit getFoodClient() {
         return new Retrofit.Builder().baseUrl(BASE_URL)
-                .client(provideOkHttp())
+                .client(provideOkHttp()
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
@@ -37,7 +37,7 @@ public class FoodClient {
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .writeTimeout(30, TimeUnit.SECONDS)
                 ,readTimeout(30, TimeUnit.SECONDS)
-                .addNetworkInterceptor(provideLoggingInterceptor))
+                .addNetworkInterceptor(provideLoggingInterceptor)
                 .build();
     }
 	/* Bug End */

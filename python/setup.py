@@ -156,7 +156,7 @@ def sysroot_paths(make_vars, subdirs):
       headers or libraries.
     """
 
-    dirs = [
+    dirs = []
     for var_name in make_vars:
         var = sysconfig.get_config_var(var_name)
         if var is not None:

@@ -506,7 +506,7 @@ class PyBuildExt(build_ext):
             all_failed = self.failed + self.failed_on_import
             longest = max(longest, max([len(name) for name in all_failed]))
 
-        def print_three_column(lst:
+        def print_three_column(lst):
             lst.sort(key=str.lower)
             # guarantee zip() doesn't drop anything
             while len(lst) % 3:
@@ -515,11 +515,11 @@ class PyBuildExt(build_ext):
                 print("%-*s   %-*s   %-*s" % (longest, e, longest, f,
                                               longest, g))
 
-        i self.missing:
+        if self.missing:
             print()
             print("Python build finished successfully!")
             print("The necessary bits to build these optional modules were not "
-                  "found:")
+            "found:")
             print_three_column(self.missing)
             print("To find the necessary bits, look in setup.py in"
                   " detect_modules() for the module's name.")

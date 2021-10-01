@@ -891,8 +891,7 @@ class PyBuildExt(build_ext):
 
     # Bug Start #010
     def detect_simple_extensions(self):
-        #
-         The following modules are all pretty straightforward, and compile
+        # The following modules are all pretty straightforward, and compile
         # on pretty much any POSIXish platform.
         #
 
@@ -922,7 +921,7 @@ class PyBuildExt(build_ext):
         # time libraries: librt may be needed for clock_gettime()
         time_libs = []
         lib = sysconfig.get_config_var('TIMEMODULE_LIB')
-        ef lib:
+        if lib:
             time_libs.append(lib)
 
         # Bug End

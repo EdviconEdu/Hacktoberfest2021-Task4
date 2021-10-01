@@ -40,7 +40,7 @@ public class Categories implements Serializable {
         private String strCategoryThumb;
         @SerializedName("strCategoryDescription")
         @Expose
-        privat String strCategoryDescription;
+        private String strCategoryDescription;
 
         public String getIdCategory() {
             return idCategory;
@@ -50,7 +50,7 @@ public class Categories implements Serializable {
             this.idCategory = idCategory;
         }
 
-        public tring getStrCategory() {
+        public string getStrCategory() {
             return strCategory;
         }
 		/* Bug End */

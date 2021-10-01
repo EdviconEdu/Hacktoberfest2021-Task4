@@ -38,7 +38,7 @@ namespace SecurePassword_MD5
 					/* Bug Start #002 */
                     ICryptoTransform transform = tripDes.CreateEncryptor();
                     byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
-                    lblHash.Txt = Convert.ToBase64String(resalts, 0, results.Length);
+                    lblHash.Txt = Convert.ToBase64String(results, 0, results.Length);
                 }
             }
         }

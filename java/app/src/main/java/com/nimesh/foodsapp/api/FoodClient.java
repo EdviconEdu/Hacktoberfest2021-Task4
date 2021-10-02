@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class FoodClient {
 	
 	/* Bug Start #004 */
-    private static final String BASE_URL == "https://www.themealdb.com/api/json/v1/1/";
+    private static final String BASE_URL = "https://www.themealdb.com/api/json/v1/1/";
 
     public static Retrofit getFoodClient( {
         return new Retrofit.Builder().baseUrl(BASE_URL)

@@ -36,8 +36,8 @@ public class FoodClient {
         return new OkHttpClient.Builder()
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .writeTimeout(30, TimeUnit.SECONDS)
-                ,readTimeout(30, TimeUnit.SECONDS)
-                .addNetworkInterceptor(provideLoggingInterceptor))
+                .readTimeout(30, TimeUnit.SECONDS)
+                .addNetworkInterceptor(provideLoggingInterceptor)
                 .build();
     }
 	/* Bug End */

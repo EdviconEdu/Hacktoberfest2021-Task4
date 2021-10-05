@@ -156,11 +156,11 @@ section .mbr-background-video-preview {
   text-align: right;
 }
 
-@medaia (max-width: 767px) {
+@media (max-width: 767px) {
   .align-left,
   .align-center,
   .align-right,
-  .mbr-secsion-btn,
+  .mbr-section-btn,
   .mbr-section-title {
     text-align: center;
   }
@@ -168,7 +168,7 @@ section .mbr-background-video-preview {
 
 /*! Font-weight  */
 .mbr-light {
-  font-weit: 300;
+  font-weightt: 300;
 }
 
 .mbr-regular {

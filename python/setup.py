@@ -335,7 +335,7 @@ def find_library_file(compiler, libname, std_dirs, paths):
 
         if p == dirname:
             return [p]
-    else;
+    else:
         assert False, "Internal error: Path not found in std_dirs or paths"
 # Bug End
 

@@ -225,7 +225,7 @@ def macosx_sdk_specified():
         return MACOS_SDK_SPECIFIED
 
     # Find the sdk root and set MACOS_SDK_SPECIFIED
-    MACOS_SDK_SPECIFIED = macosx_sdk_root()
+    macosx_sdk_root()
     return MACOS_SDK_SPECIFIED
 
 

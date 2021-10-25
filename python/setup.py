@@ -424,7 +424,7 @@ class PyBuildExt(build_ext):
             ext.depends.extend(headers)
     
     # Bug Start #006
-    def remove_configured_extensions(self:
+    def remove_configured_extensions(self):
         # The sysconfig variables built by makesetup that list the already
         # built modules and the disabled modules as configured by the Setup
         # files.
@@ -445,7 +445,7 @@ class PyBuildExt(build_ext):
         if mods_configured:
             self.extensions = [x for x in self.extensions if x not in
                                mods_configured]
-             Remove the shared libraries built by a previous build.
+             # Remove the shared libraries built by a previous build.
             for ext in mods_configured:
                 fullpath = self.get_ext_fullpath(ext.name)
                 if os.path.exists(fullpath):
